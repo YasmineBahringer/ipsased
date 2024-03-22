@@ -1,0 +1,15 @@
+input.input-text {
+    width: 160px;
+    padding: 3px 6px;
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.input-text-double-click-to-edit {
+    border-color: transparent;
+
+    &:read-only {
+        cursor: pointer;
+    }
+}

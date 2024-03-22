@@ -1,0 +1,149 @@
+.sb-story {
+    min-height: 180px;
+}
+.uktdropdown input {
+    box-sizing: border-box;
+    width: 110px;
+}
+.uktdropdown-body ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+.uktdropdown-body li {
+    padding: 4px 8px;
+    margin: 4px 0;
+    white-space: nowrap;
+}
+
+.uktdropdown-body .heading {
+    color: #aaa;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0.75rem 0 0.5rem;
+}
+
+.uktdropdown-body .heading:first-child {
+    margin-top: 0.25rem;
+}
+
+.no-trigger-text .uktdropdown-trigger {
+    position: relative;
+    margin-left: 3px;
+    width: 27px;
+    height: 21px;
+    vertical-align: top;
+}
+.no-trigger-text .uktdropdown-trigger:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: 10px;
+    left: 4px;
+    border-radius: 2px 0 0 3px;
+    background-color: #666;
+    transform: rotateZ(38deg);
+}
+.no-trigger-text .uktdropdown-trigger:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: 10px;
+    right: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #666;
+    transform: rotateZ(-38deg);
+}
+
+.font-weight {
+    font-size: 13px;
+}
+.font-weight .item-title {
+    color: #ababab;
+}
+.font-weight [data-ukt-active] .item-title {
+    color: #fff;
+}
+
+.searchable-with-label input,
+.searchable-with-label .uktdropdown-body {
+    min-width: 0px;
+    width: 85px;
+}
+
+.dropdown-without-items .uktdropdown-body {
+    width: 300px;
+}
+
+.css-value-input-trigger .uktdropdown-label-text {
+    display: flex;
+    align-self: center;
+}
+
+.textarea-trigger .uktdropdown-body {
+    width: 400px;
+    font-size: 13px;
+}
+
+.checkboxes .uktdropdown-body {
+    width: 150px;
+}
+
+.checkboxes input[type="checkbox"] {
+    width: auto;
+}
+
+.overlapping-dropdown .uktdropdown-body {
+    top: -5px;
+    left: -5px;
+    width: 250px;
+    min-height: 200px;
+}
+
+.out-of-bounds-example.uktdropdown {
+    position: absolute;
+    bottom: 50px;
+}
+.out-of-bounds-example input {
+    width: 150px;
+}
+
+.out-of-bounds-example .uktdropdown-body {
+    width: 250px;
+}
+
+.position-right.uktdropdown {
+    position: absolute;
+    right: 65px;
+}
+
+.out-of-bounds-example.no-direction-change.uktdropdown {
+    position: relative;
+    margin-top: 220px;
+}
+
+.out-of-bounds-example.no-direction-change .uktdropdown-trigger {
+    width: 255px;
+}
+
+.out-of-bounds-example.no-direction-change.uktdropdown .uktdropdown-body {
+    top: 100%;
+}
+
+#anchor--uikit-controls-dropdown--out-of-bounds-with-no-direction-change
+    .innerZoomElementWrapper
+    > * {
+    overflow: auto;
+    height: 200px;
+}
+
+#anchor--uikit-controls-dropdown--out-of-bounds-with-no-direction-change .sb-story {
+    height: 230px;
+}

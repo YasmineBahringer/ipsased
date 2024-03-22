@@ -1,0 +1,44 @@
+{
+    "name": "@acusti/use-bounding-client-rect",
+    "version": "1.1.0",
+    "type": "module",
+    "sideEffects": false,
+    "exports": "./dist/useBoundingClientRect.js",
+    "main": "./dist/useBoundingClientRect.js",
+    "types": "./dist/useBoundingClientRect.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "description": "React hook that returns the boundingClientRect for an element and triggers an update when those dimensions change",
+    "keywords": [
+        "react",
+        "react-hooks",
+        "hooks",
+        "boundingClientRect",
+        "useBoundingClientRect",
+        "typescript",
+        "ts",
+        "flow"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/acusti/uikit.git",
+        "directory": "packages/use-bounding-client-rect"
+    },
+    "author": "andrew patton <andrew@acusti.ca> (https://www.acusti.ca)",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/acusti/uikit/issues"
+    },
+    "homepage": "https://github.com/acusti/uikit/tree/main/packages/use-bounding-client-rect#readme",
+    "devDependencies": {
+        "@types/react": "^18.2.45",
+        "typescript": "^5.3.3",
+        "vitest": "^1.1.0"
+    },
+    "peerDependencies": {
+        "react": "^16.8 || ^17 || ^18",
+        "react-dom": "^16.8 || ^17 || ^18"
+    }
+}

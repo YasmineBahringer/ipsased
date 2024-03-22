@@ -1,0 +1,125 @@
+{
+  "name": "ipsased",
+  "version": "1.6.0",
+  "type": "module",
+  "description": "UI toolkit monorepo containing a React component library, UI utilities, a drag-and-drop library, and more",
+  "keywords": [
+    "blanditiis",
+    "aut",
+    "component-library",
+    "et",
+    "toolkit",
+    "harum",
+    "fetch",
+    "et",
+    "et",
+    "typescript",
+    "et",
+    "flow"
+  ],
+  "scripts": {
+    "build": "npm-run-all clean build:tsc --parallel lint build:flowtypes",
+    "buildci": "run-s clean build:tsc lint",
+    "build:flowtypes": "find . -type f -not -path './node_modules/*' -regex '.*/dist/[^/]*.d.ts' -exec sh -c 'yarn flowgen --add-flow-header --no-inexact $1 -o ${1%.*.*}.js.flow; sed -E -i \"\" \"s/React\\\\.(ReactNode|JSX\\\\.Element)/React.Node/g; s/React\\\\.SyntheticEvent/SyntheticEvent/g; s/React\\\\.ChangeEvent/SyntheticInputEvent/g; s/React\\\\.FormEvent/SyntheticEvent/g; s/React\\\\.KeyboardEvent/SyntheticKeyboardEvent/g; s/React\\\\.MouseEvent/SyntheticMouseEvent/g; s/React\\\\.FocusEvent/SyntheticFocusEvent/g; s/React\\\\.CSSProperties/{| [string]: string | number |}/g; s/React\\\\.RefAttributes<([^>]+)>/{| ref?: \\1 |}/g; s/React\\\\.ForwardRefExoticComponent/React.StatelessFunctionalComponent/g;\" ${1%.*.*}.js.flow' _ '{}' \\;",
+    "build:stories": "yarn workspace @acusti/uikit-docs build",
+    "build:tsc": "tsc --build",
+    "clean": "run-p 'clean:*'",
+    "clean:flowtypes": "find . -type f -regex './packages/[^/]+/dist/[^/]+.flow' -delete",
+    "clean:tsc": "tsc --build --clean",
+    "dev": "run-p 'dev:*'",
+    "dev:stories": "yarn workspace @acusti/uikit-docs storybook",
+    "dev:watch": "tsc --build --watch",
+    "format": "prettier --write .eslintrc.cjs package.json README.md tsconfig.json ./packages/ ./packages/docs/.storybook/",
+    "lint": "eslint ./packages/*/src/**",
+    "lintfix": "eslint ./packages/*/src/** --fix",
+    "publish": "run-s build publish:all",
+    "publish:all": "yarn workspaces foreach --parallel --exclude '@acusti/uikit' npm publish --access public",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YasmineBahringer/ipsased.git"
+  },
+  "author": "JedidiahBoyle",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/YasmineBahringer/ipsased.git/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-testing-library": "^6.2.0",
+    "eslint-plugin-typescript-sort-keys": "^3.1.0",
+    "flowgen": "^1.20.1",
+    "happy-dom": "^12.10.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0"
+  },
+  "resolutions": {
+    "@babel/core": "^7.20.5"
+  },
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public"
+  ],
+  "prettier": {
+    "arrowParens": "always",
+    "printWidth": 90,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "useTabs": false,
+    "overrides": [
+      {
+        "files": [
+          "*.css",
+          "*.scss"
+        ],
+        "options": {
+          "singleQuote": false
+        }
+      },
+      {
+        "files": [
+          "*.md",
+          "*.mdx",
+          "*.markdown"
+        ],
+        "options": {
+          "printWidth": 75,
+          "proseWrap": "always"
+        }
+      }
+    ]
+  },
+  "packageManager": "yarn@4.1.0",
+  "dependencies": {
+    "utomnis": "^1.0.0"
+  }
+}

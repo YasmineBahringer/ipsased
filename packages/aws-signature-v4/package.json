@@ -1,0 +1,48 @@
+{
+    "name": "@acusti/aws-signature-v4",
+    "version": "0.6.2",
+    "type": "module",
+    "sideEffects": false,
+    "exports": "./dist/index.js",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "description": "A lightweight isomorphic module to generate request headers that fulfill the AWS SigV4 signing process",
+    "keywords": [
+        "aws",
+        "aws-sigv4",
+        "crypto",
+        "isomorphic",
+        "universal",
+        "node",
+        "browser",
+        "typescript",
+        "ts",
+        "flow"
+    ],
+    "scripts": {
+        "test": "vitest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/acusti/uikit.git",
+        "directory": "packages/aws-signature-v4"
+    },
+    "author": "andrew patton <andrew@acusti.ca> (https://www.acusti.ca)",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/acusti/uikit/issues"
+    },
+    "homepage": "https://github.com/acusti/uikit/tree/main/packages/aws-signature-v4#readme",
+    "dependencies": {
+        "@acusti/webcrypto": "^1.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.5",
+        "typescript": "^5.3.3",
+        "vitest": "^1.1.0"
+    }
+}

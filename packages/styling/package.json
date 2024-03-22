@@ -1,0 +1,54 @@
+{
+    "name": "@acusti/styling",
+    "version": "0.7.2",
+    "type": "module",
+    "sideEffects": false,
+    "exports": "./dist/index.js",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "description": "React component that renders a CSS style string as a <style> element in the <head> of the document (with global style de-duplication)",
+    "keywords": [
+        "react",
+        "react-component",
+        "styles",
+        "css",
+        "css-in-js",
+        "ssr",
+        "typescript",
+        "ts",
+        "flow"
+    ],
+    "scripts": {
+        "test": "vitest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/acusti/uikit.git",
+        "directory": "packages/styling"
+    },
+    "author": "andrew patton <andrew@acusti.ca> (https://www.acusti.ca)",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/acusti/uikit/issues"
+    },
+    "homepage": "https://github.com/acusti/uikit/tree/main/packages/styling#readme",
+    "devDependencies": {
+        "@testing-library/dom": "^9.3.1",
+        "@testing-library/react": "^14.0.0",
+        "@testing-library/user-event": "^14.4.3",
+        "@types/react": "^18.2.45",
+        "happy-dom": "^12.10.3",
+        "react": "^18",
+        "react-dom": "^18",
+        "typescript": "^5.3.3",
+        "vitest": "^1.1.0"
+    },
+    "peerDependencies": {
+        "react": "^16.8 || ^17 || ^18",
+        "react-dom": "^16.8 || ^17 || ^18"
+    }
+}
